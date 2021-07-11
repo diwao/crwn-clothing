@@ -11,7 +11,7 @@ const INITIAL_STATE = {
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
-  console.log(action);
+  // console.log(action);
   switch (action.type) {
     case CartActionTypes.TOGGLE_CART_HIDDEN:
       return {
