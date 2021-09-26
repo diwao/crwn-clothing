@@ -4,7 +4,7 @@ import CustomButton from '../CustomButton/CustomButton';
 
 import { auth, createUserProfileDocument } from '../../firebase/firebase.util';
 
-import './SignUp.scss';
+import { SignUpContainer, SignUpTitle } from './SignUp.styles';
 
 class SignUp extends Component {
   constructor(props) {
@@ -57,15 +57,15 @@ class SignUp extends Component {
   render() {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
-      <div className="sign-up">
-        <h2 className="title">I do not have an account </h2>
+      <SignUpContainer>
+        <SignUpTitle>I do not have a account</SignUpTitle>
         <span>Sign up with your email and password</span>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
             name="displayName"
             value={displayName}
-            handleChange={this.handleChange}
+            onChange={this.handleChange}
             label="Display Name"
             required
           />
@@ -73,7 +73,7 @@ class SignUp extends Component {
             type="email"
             name="email"
             value={email}
-            handleChange={this.handleChange}
+            onChange={this.handleChange}
             label="Email"
             required
           />
@@ -81,7 +81,7 @@ class SignUp extends Component {
             type="password"
             name="password"
             value={password}
-            handleChange={this.handleChange}
+            onChange={this.handleChange}
             label="Password"
             required
           />
@@ -89,13 +89,13 @@ class SignUp extends Component {
             type="password"
             name="confirmPassword"
             value={confirmPassword}
-            handleChange={this.handleChange}
+            onChange={this.handleChange}
             label="Confirm Password"
             required
           />
           <CustomButton type="submit">SIGN UP</CustomButton>
         </form>
-      </div>
+      </SignUpContainer>
     );
   }
 }

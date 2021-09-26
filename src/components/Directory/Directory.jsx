@@ -6,15 +6,15 @@ import { selectDirectorySections } from '../../redux/directory/direcotry.selecto
 
 import MenuItem from '../MenuItem/MenuItem';
 
-import './Directory.scss';
+import { DirectoryMenuContainer } from './Directory.styles';
 
 function Directory({ sections }) {
   return (
-    <div className="directory-menu">
+    <DirectoryMenuContainer>
       {sections.map(({ id, ...otherSectionProps }) => (
         <MenuItem key={id} {...otherSectionProps} />
       ))}
-    </div>
+    </DirectoryMenuContainer>
   );
 }
 

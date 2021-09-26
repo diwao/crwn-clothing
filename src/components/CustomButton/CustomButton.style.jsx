@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 
 const buttonStyles = css`
   background-color: black;
-  border: none;
   color: white;
+
   &:hover {
     background-color: white;
     color: black;
@@ -41,6 +41,7 @@ const getButtonStyles = (props) => {
 };
 
 export const CustomButtonContainer = styled.button`
+  border: none;
   min-width: 165px;
   width: auto;
   height: 50px;
@@ -54,7 +55,5 @@ export const CustomButtonContainer = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
-  border: none;
-
   ${getButtonStyles}
 `;
