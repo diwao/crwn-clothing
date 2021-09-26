@@ -8,8 +8,6 @@ import { selectCollectionsForPreview } from '../../redux/shop/shop.selector';
 
 import { CollectionsOverviewContainer } from './CollectionOverview.styles';
 
-import './CollectionsOverview.scss';
-
 function CollectionsOverview({ collections }) {
   return (
     <CollectionsOverviewContainer>
